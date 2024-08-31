@@ -1,0 +1,47 @@
+@import "./_colors.scss";
+
+:root {
+  --red: #{$sonokai-light-red};
+  --blue: #{$sonokai-light-blue};
+  --cyan: #{$sonokai-light-cyan};
+  --purple: #{$sonokai-light-purple};
+  --background: #{$sonokai-light-background};
+  --grey: #{$sonokai-light-grey};
+  --grey-dark: #{$sonokai-light-grey-dark};
+  --overlay: #{$sonokai-light-overlay};
+  --text: #{$sonokai-light-text};
+}
+
+[data-theme="dark"] {
+  --red: #{$sonokai-red};
+  --blue: #{$sonokai-blue};
+  --cyan: #{$sonokai-cyan};
+  --purple: #{$sonokai-purple};
+  --background-dark: #{$sonokai-background-dark};
+  --background: #{$sonokai-background};
+  --foreground: #{$sonokai-foreground};
+  --black: #{$sonokai-black};
+  --white: #{$sonokai-white};
+  --yellow: #{$sonokai-yellow};
+  --orange: #{$sonokai-orange};
+  --muted: #{$sonokai-muted};
+  --subtle: #{$sonokai-subtle};
+  --text: #{$sonokai-text};
+}
+
+[data-theme="moon"] {
+  --red: #{$sonokai-red};
+  --blue: #{$sonokai-blue};
+  --cyan: #{$sonokai-cyan};
+  --purple: #{$sonokai-purple};
+  --background-dark: #{$sonokai-background-dark};
+  --background: #{$sonokai-background};
+  --foreground: #{$sonokai-foreground};
+  --black: #{$sonokai-black};
+  --white: #{$sonokai-white};
+  --yellow: #{$sonokai-yellow};
+  --orange: #{$sonokai-orange};
+  --muted: #{$sonokai-muted};
+  --subtle: #{$sonokai-subtle};
+  --text: #{$sonokai-text};
+}
