@@ -1,3 +1,16 @@
-.logo {
-  color: var(--green);
+.container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.right {
+  display: flex;
+  gap: 1rem;
+}
+
+.icons {
+  font-size: 1.4rem;
 }

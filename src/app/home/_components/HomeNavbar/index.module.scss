@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  gap: 2rem;
+}
+
+.option {
+  background: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1.2rem;
+  color: var(--text);
+  background-image: linear-gradient(to right, var(--red), var(--subtle));
+  background-size: 0% 100%;
+  transition: background-size 0.3s ease-out;
+  cursor: pointer;
+
+  &:focus,
+  &:active,
+  &.active {
+    background-size: 100% 100%;
+    outline: none;
+  }
+}
