@@ -1,12 +1,15 @@
 import Header from "@/components/Header";
 import ModalsProvider from "@/context/ModalsContext";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "@/styles/_reset.scss";
 import "@/styles/_common.scss";
 import "@/styles/_theme.scss";
 import DarkModeContextProvider from "@/context/DarkModeContext";
+import Navbar from "@/components/Navbar";
+import styles from "./layout.module.scss";
+import cn from "@/utils/className";
 
-const inter = Inter({ subsets: ["latin"] });
+const openSans = Open_Sans({ subsets: ["latin"] });
 
 const APP_NAME = "PWA App";
 const APP_DEFAULT_TITLE = "My Awesome PWA App";
@@ -56,11 +59,14 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body className={inter.className}>
+      <body>
         <DarkModeContextProvider>
           <ModalsProvider>
-            <Header />
-            {children}
+            <main className={cn(styles.container, openSans.className)}>
+              <Header />
+              {children}
+              <Navbar />
+            </main>
           </ModalsProvider>
         </DarkModeContextProvider>
       </body>

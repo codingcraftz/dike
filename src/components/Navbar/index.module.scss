@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  margin-top: auto;
+  padding: 1rem;
+  background: #41444e;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  svg {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+  }
+}
+
+.active {
+  color: var(--blue);
+}

@@ -1,0 +1,29 @@
+.container {
+  background: var(--orange);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: var(--grey);
+}
+.title {
+  padding-bottom: 0.5rem;
+}
+.footer {
+  display: flex;
+  color: var(--grey);
+  justify-content: space-between;
+  span {
+    font-size: 0.8rem;
+  }
+}
+
+.red {
+  background: var(--red);
+}
+
+.orange {
+  background: var(--orange);
+}
+
+.blue {
+  background: var(--blue);
+}

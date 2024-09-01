@@ -1,16 +1,22 @@
 .container {
+  background: #41444e;
+  position: relative;
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: space-between;
-  margin: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
-.right {
-  display: flex;
-  gap: 1rem;
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
 }
 
-.icons {
-  font-size: 1.4rem;
+.plus {
+  margin-left: auto;
+  font-size: 2rem;
 }

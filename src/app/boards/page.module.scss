@@ -1,0 +1,21 @@
+.container {
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: var(--grey-dark);
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.sortIcon {
+  font-size: 1.2rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

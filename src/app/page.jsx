@@ -1,10 +1,12 @@
 import Link from "next/link";
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
-    <main>
-      <h1>dike</h1>
-      <Link href="/home">일하러 가기</Link>
-    </main>
+    <div className={styles.container}>
+      <Link className={styles.button} href="/home">
+        일하러 가기
+      </Link>
+    </div>
   );
 }
