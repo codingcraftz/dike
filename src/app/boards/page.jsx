@@ -2,7 +2,6 @@
 import TaskCard from "@/components/TaskCard";
 import styles from "./page.module.scss";
 import { BOARD_DATA } from "@/utils/constant";
-import { FaSort } from "react-icons/fa";
 import Dropdown from "@/components/Dropdown";
 import { useState } from "react";
 import Modal from "@/components/Modal";

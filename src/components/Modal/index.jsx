@@ -2,23 +2,29 @@ import React, { useEffect, useState } from "react";
 import styles from "./index.module.scss";
 
 const Modal = ({ isOpen, onClose, children }) => {
-  const [isClosing, setIsClosing] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
-    if (!isOpen) {
-      setIsClosing(true); // 모달이 닫히는 상태로 설정
-      setTimeout(() => {
-        setIsClosing(false); // 애니메이션 후 상태 초기화
-      }, 300); // 애니메이션 시간과 맞춰 설정 (0.3s)
-    }
-  }, [isOpen]);
+    if (isOpen) {
+      setIsAnimating(true);
+    } else if (isAnimating) {
+      // 모달이 닫힐 때 애니메이션을 적용한 후 제거
+      const timeout = setTimeout(() => {
+        setIsAnimating(false);
+      }, 300); // 애니메이션 지속 시간과 동일하게 설정
 
-  if (!isOpen && !isClosing) return null;
+      return () => clearTimeout(timeout);
+    }
+  }, [isOpen, isAnimating]);
+
+  if (!isOpen && !isAnimating) return null;
 
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
       <div
-        className={`${styles.modalContent} ${isOpen ? styles.slideIn : styles.slideOut}`}
+        className={`${styles.modalContent} ${
+          isOpen ? styles.slideIn : styles.slideOut
+        }`}
         onClick={(e) => e.stopPropagation()}
       >
         <button onClick={onClose} className={styles.closeButton}>
